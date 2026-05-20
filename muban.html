@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .resume {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #222;
+            border-left: 4px solid #333;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        .item {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .item-time {
+            color: #666;
+            float: right;
+        }
+
+        .content {
+            color: #333;
+            margin-top: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .resume {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <!-- 头部信息 -->
+        <div class="header">
+            <div class="name">张三</div>
+            <div class="info">
+                求职意向：前端开发工程师 | 电话：13800138000 | 邮箱：zhangsan@example.com<br>
+                年龄：25岁 | 学历：本科 | 现居城市：北京
+            </div>
+        </div>
+
+        <!-- 教育经历 -->
+        <div class="section">
+            <div class="section-title">教育经历</div>
+            <div class="item">
+                <div>
+                    <span class="item-title">XX大学 - 计算机科学与技术</span>
+                    <span class="item-time">2019.09 - 2023.06</span>
+                </div>
+                <div class="content">本科 | 专业排名前20% | 主修：HTML/CSS/JS、数据结构、计算机网络</div>
+            </div>
+        </div>
+
+        <!-- 工作/实习经历 -->
+        <div class="section">
+            <div class="section-title">工作经历</div>
+            <div class="item">
+                <div>
+                    <span class="item-title">XX科技有限公司 - 前端开发实习生</span>
+                    <span class="item-time">2022.07 - 2023.03</span>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>负责公司官网页面开发与维护，使用 HTML + CSS + JavaScript 实现页面布局与交互</li>
+                        <li>参与移动端适配，优化页面加载速度与用户体验</li>
+                        <li>配合后端完成接口联调，实现数据展示与表单提交</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 专业技能 -->
+        <div class="section">
+            <div class="section-title">专业技能</div>
+            <div class="content">
+                <ul>
+                    <li>熟练使用 HTML5 / CSS3 / JavaScript 进行页面开发</li>
+                    <li>掌握 Vue 基础、Flex / Grid 布局、响应式开发</li>
+                    <li>了解 Git 版本控制、浏览器调试、基础网络知识</li>
+                    <li>能独立完成从设计稿到可上线页面的开发</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 项目经历 -->
+        <div class="section">
+            <div class="section-title">项目经历</div>
+            <div class="item">
+                <div class="item-title">个人响应式简历网站</div>
+                <div class="content">
+                    使用纯 HTML + CSS 开发，适配手机、平板、电脑，支持一键打印与导出 PDF。
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-title">简易任务管理系统</div>
+                <div class="content">
+                    基于 JavaScript 实现任务增删改查，本地存储数据，提升前端逻辑与交互能力。
+                </div>
+            </div>
+        </div>
+
+        <!-- 自我评价 -->
+        <div class="section">
+            <div class="section-title">自我评价</div>
+            <div class="content">
+                热爱前端开发，学习能力强，代码习惯良好，注重细节与用户体验；善于沟通，有责任心，能快速适应团队开发节奏。
+            </div>
+        </div>
+    </div>
+</body>
+</html>
