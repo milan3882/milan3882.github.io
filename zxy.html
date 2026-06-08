@@ -1,471 +1,529 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>赵欣予 · 眼科学博士/主治医师 | 深圳市眼科医院</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-body {
-background: linear-gradient(145deg, #eef3f8 0%, #e0e9f0 100%);
-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-line-height: 1.5;
-color: #1a2f3c;
-padding: 2rem 1rem;
-}
-.resume-card {
-max-width: 1300px;
-margin: 0 auto;
-background: #ffffff;
-border-radius: 44px;
-box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.02);
-overflow: hidden;
-transition: all 0.2s ease;
-}
-.hero {
-background: linear-gradient(120deg, #134e6f 0%, #1b3b4f 100%);
-padding: 2rem 3rem;
-color: white;
-position: relative;
-}
-.hero::after {
-content: '';
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-height: 4px;
-background: linear-gradient(90deg, #ffcd94, #ffaa66, #ff8a5c);
-}
-.hero-content {
-display: flex;
-flex-wrap: wrap;
-gap: 2rem;
-align-items: center;
-}
-.avatar-wrapper {
-flex-shrink: 0;
-}
-.avatar-circle {
-width: 140px;
-height: 140px;
-background: #ffffff20;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-border: 3px solid rgba(255,205,148,0.8);
-box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-overflow: hidden;
-}
-.avatar-circle img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-.hero-text {
-flex: 1;
-}
-.name-title h1 {
-font-size: 2.6rem;
-font-weight: 700;
-letter-spacing: -0.01em;
-margin-bottom: 0.25rem;
-}
-.name-title .sub {
-font-size: 1.1rem;
-font-weight: 500;
-opacity: 0.92;
-margin-bottom: 0.5rem;
-}
-.honor-badges {
-display: flex;
-flex-wrap: wrap;
-gap: 0.7rem;
-margin: 0.7rem 0 0.5rem;
-}
-.honor-badge {
-background: rgba(255,255,255,0.16);
-backdrop-filter: blur(4px);
-padding: 0.3rem 1rem;
-border-radius: 40px;
-font-size: 0.75rem;
-font-weight: 500;
-border: 1px solid rgba(255,255,255,0.25);
-}
-.honor-badge i {
-margin-right: 6px;
-}
-.contact-bar {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-margin-top: 1.3rem;
-background: rgba(0,0,0,0.2);
-padding: 0.7rem 1.2rem;
-border-radius: 50px;
-font-size: 0.82rem;
-}
-.contact-info {
-display: flex;
-flex-wrap: wrap;
-gap: 1.2rem;
-}
-.contact-info span i {
-width: 1.4rem;
-color: #ffcd94;
-}
-.resume-grid {
-display: grid;
-grid-template-columns: 1fr 2.3fr;
-gap: 0;
-}
-.sidebar {
-background: #fbfefe;
-padding: 2rem 2rem 2.5rem 2rem;
-border-right: 1px solid #e4eff6;
-}
-.section {
-margin-bottom: 2rem;
-}
-.section-title {
-font-size: 0.85rem;
-font-weight: 800;
-text-transform: uppercase;
-letter-spacing: 1.2px;
-color: #1e708b;
-margin-bottom: 1rem;
-display: flex;
-align-items: center;
-gap: 0.6rem;
-border-bottom: 2px solid #e2eff6;
-padding-bottom: 6px;
-}
-.section-title i {
-font-size: 0.85rem;
-color: #3a8eb0;
-}
-.info-list {
-list-style: none;
-}
-.info-list li {
-margin-bottom: 0.7rem;
-font-size: 0.88rem;
-display: flex;
-gap: 0.6rem;
-align-items: baseline;
-}
-.info-list li strong {
-font-weight: 700;
-min-width: 70px;
-color: #1f5773;
-}
-.edu-item, .work-item {
-margin-bottom: 0.8rem;
-}
-.edu-date {
-font-weight: 600;
-color: #2c7a9c;
-font-size: 0.8rem;
-}
-.expertise-tags {
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
-margin-top: 0.2rem;
-}
-.tag {
-background: white;
-border-radius: 30px;
-padding: 3px 12px;
-font-size: 0.7rem;
-font-weight: 500;
-border: 1px solid #cde1ec;
-color: #236b8e;
-}
-.main-content {
-padding: 2rem 2.5rem 2.5rem 2.5rem;
-background: white;
-}
-.bio-note {
-background: #f5fafd;
-padding: 1rem 1.4rem;
-border-radius: 28px;
-border-left: 5px solid #ffaa66;
-margin-bottom: 1.8rem;
-font-size: 0.92rem;
-line-height: 1.6;
-color: #1d536e;
-}
-.paper-card {
-background: #fefeff;
-border-radius: 20px;
-padding: 1rem 1.2rem;
-transition: all 0.2s;
-border: 1px solid #eaf2f7;
-margin-bottom: 0.9rem;
-}
-.paper-card:hover {
-background: #ffffff;
-border-color: #c7dfec;
-box-shadow: 0 6px 12px rgba(0,0,0,0.03);
-}
-.paper-title {
-font-weight: 700;
-font-size: 0.9rem;
-color: #0f4b66;
-margin-bottom: 0.3rem;
-display: flex;
-align-items: center;
-gap: 0.5rem;
-flex-wrap: wrap;
-}
-.paper-meta {
-font-size: 0.7rem;
-color: #6f95aa;
-margin-bottom: 0.4rem;
-}
-.paper-link {
-display: inline-flex;
-align-items: center;
-gap: 6px;
-font-size: 0.7rem;
-font-weight: 500;
-background: #eef4f9;
-padding: 0.2rem 0.8rem;
-border-radius: 30px;
-text-decoration: none;
-color: #1b6e8f;
-transition: 0.2s;
-}
-.paper-link i {
-font-size: 0.65rem;
-}
-hr.divider {
-margin: 1.2rem 0;
-border: none;
-height: 1px;
-background: linear-gradient(to right, #e2edf5, transparent);
-}
-.footer-note {
-margin-top: 2rem;
-font-size: 0.68rem;
-text-align: center;
-color: #7a99ae;
-border-top: 1px solid #ecf3f9;
-padding-top: 1rem;
-}
-@media (max-width: 780px) {
-.resume-grid {
-grid-template-columns: 1fr;
-}
-.hero {
-padding: 1.5rem;
-}
-.hero-content {
-flex-direction: column;
-text-align: center;
-}
-.contact-bar {
-flex-direction: column;
-align-items: flex-start;
-gap: 0.5rem;
-}
-.sidebar {
-border-right: none;
-border-bottom: 1px solid #e4edf4;
-}
-.main-content {
-padding: 1.8rem;
-}
-}
-a {
-text-decoration: none;
-}
-.if-badge {
-background: #e2f0f5;
-border-radius: 20px;
-font-size: 0.65rem;
-padding: 2px 8px;
-font-weight: 600;
-color: #1c718f;
-}
-</style>
-<base target="_blank">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>赵欣予·眼科学博士/主治医师 | 深圳市眼科医院</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #eef3f8 0%, #e0e9f0 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.5;
+            color: #1a2f3c;
+            padding: 2rem 1rem;
+        }
+
+        .resume-card {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 44px;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0.18), 0 2px 8px rgba(0, 0, 0.02);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #134e6f 0%, #1b3b4f 100%);
+            padding: 2rem 3rem;
+            color: white;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ffcd94, #ffaa66, #ff8a5c);
+        }
+
+        .hero-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .avatar-wrapper {
+            flex-shrink: 0;
+        }
+
+        .avatar-circle {
+            width: 140px;
+            height: 140px;
+            background: #ffffff20;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid rgba(255,205,148,0.8);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .avatar-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .name-title h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.25rem;
+        }
+
+        .name-title .sub {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.92;
+            margin-bottom: 0.5rem;
+        }
+
+        .honor-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin: 0.7rem 0 0.5rem;
+        }
+
+        .honor-badge {
+            background: rgba(255,255,255,0.16);
+            backdrop-filter: blur(4px);
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .honor-badge i {
+            margin-right: 6px;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.3rem;
+            background: rgba(0,0,0,0.2);
+            padding: 0.7rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.82rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+        }
+
+        .contact-info span i {
+            width: 1.4rem;
+            color: #ffcd94;
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 1fr 2.3fr;
+            gap: 0;
+        }
+
+        .sidebar {
+            background: #fbfefe;
+            padding: 2rem 2rem 2.5rem 2rem;
+            border-right: 1px solid #e4eff6;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #1e708b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            border-bottom: 2px solid #e2eff6;
+            padding-bottom: 6px;
+        }
+
+        .section-title i {
+            font-size: 0.85rem;
+            color: #3a8eb0;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+        .info-list li {
+            margin-bottom: 0.7rem;
+            font-size: 0.88rem;
+            display: flex;
+            gap: 0.6rem;
+            align-items: baseline;
+        }
+        .info-list li strong {
+            font-weight: 700;
+            min-width: 70px;
+            color: #1f5773;
+        }
+        .edu-item, .work-item {
+            margin-bottom: 0.8rem;
+        }
+        .edu-date {
+            font-weight: 600;
+            color: #2c7a9c;
+            font-size: 0.8rem;
+        }
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 0.2rem;
+        }
+        .tag {
+            background: white;
+            border-radius: 30px;
+            padding: 3px 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            border: 1px solid #cde1ec;
+            color: #236b8e;
+        }
+        .main-content {
+            padding: 2rem 2.5rem 2.5rem 2.5rem;
+            background: white;
+        }
+
+        .bio-note {
+            background: #f5fafd;
+            padding: 1rem 1.4rem;
+            border-radius: 28px;
+            border-left: 5px solid #ffaa66;
+            margin-bottom: 1.8rem;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            color: #1d536e;
+        }
+
+        .paper-card {
+            background: #fefeff;
+            border-radius: 20px;
+            padding: 1rem 1.2rem;
+            transition: all 0.2s;
+            border: 1px solid #eaf2f7;
+            margin-bottom: 0.9rem;
+        }
+        .paper-card:hover {
+            background: #ffffff;
+            border-color: #c7dfec;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.03);
+        }
+        .paper-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #0f4b66;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .paper-meta {
+            font-size: 0.7rem;
+            color: #6f95aa;
+            margin-bottom: 0.4rem;
+        }
+        .paper-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            background: #eef4f9;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #1b6e8f;
+            transition: 0.2s;
+        }
+        .paper-link i {
+            font-size: 0.65rem;
+        }
+        hr.divider {
+            margin: 1.2rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e2edf5, transparent);
+        }
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.68rem;
+            text-align: center;
+            color: #7a99ae;
+            border-top: 1px solid #ecf3f9;
+            padding-top: 1rem;
+        }
+        @media (max-width: 780px) {
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                padding: 1.5rem;
+            }
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #e4edf4;
+            }
+            .main-content {
+                padding: 1.8rem;
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+        .if-badge {
+            background: #e2f0f5;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            padding: 2px 8px;
+            font-weight: 600;
+            color: #1c718f;
+        }
+    </style>
 </head>
 <body>
 <div class="resume-card">
-<div class="hero">
-<div class="hero-content">
-<div class="avatar-wrapper">
-<div class="avatar-circle">
-<!-- 图片标签：请将 src 替换为真实照片地址 -->
-<img src="zxy.png" alt="赵欣予医生照片">
-</div>
-</div>
-<div class="hero-text">
-<div class="name-title">
-<h1>赵欣予 <br/> <span style="font-size:1.3rem;">Xinyu Zhao, MD, PhD</span></h1>
-<div class="sub">眼科学博士 · 主治医师 · 硕士研究生导师 | 深圳市眼科医院</div>
-<div class="honor-badges">
-<span class="honor-badge"><i class="fas fa-trophy"></i> 深圳市卫生健康系统特聘人才(D类)</span>
-<span class="honor-badge"><i class="fas fa-university"></i> 宾夕法尼亚大学访问学者</span>
-<span class="honor-badge"><i class="fas fa-flask"></i> 国家自然科学基金青年项目负责人</span>
-</div>
-</div>
-<div class="contact-bar">
-<div class="contact-info">
-<span><i class="fas fa-phone-alt"></i> 13058006791</span>
-<span><i class="fas fa-envelope"></i> 13058006791@163.com</span>
-</div>
-<div class="quote-mini">
-儿童与成人眼底病智能诊疗 · 临床大型队列研究
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="resume-grid">
-<!-- 侧边栏 -->
-<div class="sidebar">
-<div class="section">
-<div class="section-title"><i class="fas fa-id-card"></i> 基本信息</div>
-<ul class="info-list">
-<li><strong>姓名</strong> 赵欣予</li>
-<li><strong>性别</strong> 女</li>
-<li><strong>职称</strong> 主治医师</li>
-<li><strong>学历</strong> 眼科学博士 (中山大学中山眼科中心)</li>
-<li><strong>博士后</strong> 清华大学<br>美国宾夕法尼亚大学访问学者</li>
-<li><strong>专业</strong> 儿童及成人眼底病、糖尿病视网膜病变、ROP智能诊疗</li>
-</ul>
-</div>
-<div class="section">
-<div class="section-title"><i class="fas fa-graduation-cap"></i> 教育经历</div>
-<div class="edu-item"><div class="edu-date">访问学者 · 宾夕div>美国宾夕法尼亚大学 (University of Pennsylvania)</div>
-<div class="edu-item"><div class="edu-date">2023-2025 · 博士后</div>清华大学 眼科学</div>
-<div class="edu-item"><div class="edu-date">博士 · 中山大学</div>中山大学中山眼科中心 眼科学</div>
-</div>
-<div class="section">
-<div class="section-title"><i class="fas fa-briefcase"></i> 工作经历</div>
-<div class="edu-item"><strong>2025.10-至今</strong> 深圳市眼科医院 住院医师、主治医师</div>
-<div class="edu-item"><strong>2023.07-2025.09</strong> 深圳市眼科医院 博士后</div>
-</div>
-<div class="section">
-<div class="section-title"><i class="fas fa-users"></i> 学术职务</div>
-<ul class="info-list">
-<li><strong>理事</strong> 中国民族医药学会眼科分会 (2024-2027)</li>
-<li><strong>委员</strong> 中国民族医药协会眼视光学分会眼底病学组 (2025-2030)</li>
-<li><strong>审稿人</strong> npj digital medicine, iScience, Artificial Intelligence in Medicine, Cochrane Database of Systematic Reviews</li>
-</ul>
-</div>
-<div class="section">
-<div class="section-title"><i class="fas fa-flask"></i> 科研项目</div>
-<ul class="info-list">
-<li><strong>国自然青年基金 (82401315)</strong></li>
-<li>基于多中心多模态对比学习的婴幼儿眼底疾病智能诊断及纵向评估模型研究，2025-2027，30万元，主持</li>
-<li><strong>深圳市医科院专项基金青年项目 (A2403020)</strong></li>
-<li>基于纵向多中心多方位荧光素眼底血管造影图像的眼底疾病智能诊断及治疗决策评估的新模型研究，2025-2027，80万元，主持</li>
-<li><strong>深圳市科创委面上项目 (CYJ20240813152703005)</strong></li>
-<li>基于多模态高效大模型的视网膜母细胞瘤智能诊断及术后疗效评估研究，2024-2026，30万元，主持</li>
-</ul>
-</div>
-<div class="section">
-<div class="section-title"><i class="fas fa-award"></i> 荣誉·获奖</div>
-<ul class="info-list">
-<li><strong>第六届妇幼健康科学技术奖 三等奖</strong></li>
-<li>深圳市早产儿视网膜病变筛查模式创建及推广应用研究，2025（排名第2/8）</li>
-<li><strong>深圳市卫生健康系统特聘岗位人才 (D类)</strong></li>
-</ul>
-</div>
-</div>
-<!-- 右侧主内容 -->
-<div class="main-content">
-<!-- 个人简介 -->
-<div class="bio-note">
-毕业于中山大学中山眼科中心、清华大学博士后、美国宾夕法尼亚大学访问学者、硕士研究生导师，深圳市卫生健康系统特聘岗位人才（D类）。现任深圳市眼科医院主治医师，兼任中国民族医药学会眼科分会理事、中国民族医药协会眼视光学分会眼底病学组委员。主要从事儿童和成人眼底病的临床诊疗和科研工作，尤其专注糖尿病视网膜病变、早产儿视网膜病变等常见眼底病的智能诊疗技术及临床大型队列研究。主持国家自然青年基金、深圳市医科院专项基金、深圳市科创委基金，共3项（总经费140万）。以第一作者（含共一）在国内外核心刊物上发表论文近30篇，其中SCI论文25篇，包括NEJM, Cell Reports Medicine, Ophthalmology, JAMA Ophthalmology, Am J Ophthalmol, Br J Ophthalmol，EPMA Journal等期刊。获得科技成果奖-第六届妇幼健康科学技术奖，参编眼科专著2本，获得国家发明专利授权4项。受邀在美国眼科学会年会（ARVO）发言，担任npj digital medicine, iScience，Artificial intelligence in medicine，Cochrane database of systematic reviews等期刊的审稿人。
-</div>
-<!-- 代表性论文 -->
-<div class="section-title"><i class="fas fa-file-alt"></i> 第一作者/通讯作者论文 (SCI)</div>
-<div class="papers-list">
-<div class="paper-card"><div class="paper-title">Spiderweb-like Vessels in Retinopathy of Prematurity</div><div class="paper-meta">N Engl J Med, 2025 IF=78.5 | 中科院1区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/39557007/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
+    <div class="hero">
+        <div class="hero-content">
+            <div class="avatar-wrapper">
+                <div class="avatar-circle">
+                    <!-- 替换为赵欣予医生真实照片地址 -->
+                    <img src="zxy.png" alt="赵欣予医生照片">
+                </div>
+            </div>
+            <div class="hero-text">
+                <div class="name-title">
+                    <h1>赵欣予 <br/> <span style="font-size:1.3rem;">Xinyu Zhao, MD, PhD</span></h1>
+                    <div class="sub">眼科学博士 · 主治医师 | 深圳市眼科医院</div>
+                    <div class="honor-badges">
+                        <span class="honor-badge"><i class="fas fa-trophy"></i> 深圳市卫健系统特聘人才(D类)</span>
+                        <span class="honor-badge"><i class="fas fa-university"></i> 清华博士后 · 宾大访问学者</span>
+                        <span class="honor-badge"><i class="fas fa-flask"></i> 硕士研究生导师 · 国自然负责人</span>
+                    </div>
+                </div>
+                <div class="contact-bar">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone-alt"></i> 13058006791</span>
+                        <span><i class="fas fa-envelope"></i> 13058006791@163.com</span>
+                    </div>
+                    <div class="quote-mini">
+                         儿童&成人眼底病 · 智能诊疗与队列研究
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="paper-card"><div class="paper-title">Ultra-widefield OCT Angiography of Beta-Thalassemia</div><div class="paper-meta">Ophthalmology, 2025 IF=9.5 | 中科院1区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/39557007/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
+    <div class="resume-grid">
+        <!-- 左侧侧边栏 -->
+        <div class="sidebar">
+            <div class="section">
+                <div class="section-title"><i class="fas fa-id-card"></i> 基本信息</div>
+                <ul class="info-list">
+                    <li><strong>职称</strong> 主治医师</li>
+                    <li><strong>学历</strong> 中山大学中山眼科中心 眼科学博士</li>
+                    <li><strong>履历</strong> 清华大学博士后、美国宾大访问学者、硕士研究生导师</li>
+                    <li><strong>专业</strong> 成人/儿童眼底病、DR、ROP、眼底病智能诊疗</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="section-title"><i class="fas fa-graduation-cap"></i> 教育与进修</div>
+                <div class="edu-item"><div class="edu-date">海外进修</div>美国宾夕法尼亚大学 访问学者</div>
+                <div class="edu-item"><div class="edu-date">2023.07-2025.09</div>清华大学 博士后（眼科学）</div>
+                <div class="edu-item"><div class="edu-date">博士阶段</div>中山大学中山眼科中心 眼科学博士</div>
+            </div>
+            <div class="section">
+                <div class="section-title"><i class="fas fa-briefcase"></i> 工作经历</div>
+                <div class="edu-item"><strong>2025.10-至今</strong> 深圳市眼科医院 住院医师、主治医师</div>
+                <div class="edu-item"><strong>2023.07-2025.09</strong> 深圳市眼科医院 博士后</div>
+            </div>
+            <div class="section">
+                <div class="section-title"><i class="fas fa-users"></i> 学术职务</div>
+                <ul class="info-list">
+                    <li><strong>理事</strong> 中国民族医药学会眼科分会（2024-2027）</li>
+                    <li><strong>委员</strong> 中国民族医药协会眼视光学分会眼底病学组（2025-2030）</li>
+                    <li><strong>审稿人</strong> npj digital medicine、Iscience、AI in Medicine、Cochrane等期刊</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="section-title"><i class="fas fa-flask"></i> 主持科研项目</div>
+                <ul class="info-list">
+                    <li><strong>国自然青年(82401315)</strong></li>
+                    <li>婴幼儿眼底病智能诊断模型，2025-2027，30万</li>
+                    <li><strong>市医科院专项(A2403020)</strong></li>
+                    <li>眼底病AI诊疗模型，2025-2027，80万</li>
+                    <li><strong>市科创委(CYJ20240813152703005)</strong></li>
+                    <li>视网膜母细胞瘤AI系统，2024-2026，30万</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="section-title"><i class="fas fa-award"></i> 荣誉·学术交流</div>
+                <ul class="info-list">
+                    <li><strong>第六届妇幼健康科学技术奖</strong> 三等奖</li>
+                    <li><strong>人才称号</strong> 深圳市卫生健康系统D类特聘岗位人才</li>
+                    <li><strong>学术发言</strong> 受邀在美国眼科学会年会(ARVO)作专题报告</li>
+                </ul>
+            </div>
+        </div>
 
-<div class="paper-card"><div class="paper-title">An artificial intelligence system for the whole process from diagnosis to treatment suggestion of ischemic retinal diseases</div><div class="paper-meta">Cell Rep Med, 2023 IF=14.3 | 中科院1区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/37858347/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
+        <!-- 右侧主内容区 -->
+        <div class="main-content">
+            <!-- 第一作者/共一 SCI 论文 -->
+            <div class="section-title"><i class="fas fa-file-alt"></i> 第一作者/共同第一作者 SCI论文（精选）</div>
+            <div class="papers-list">
+                <div class="paper-card">
+                    <div class="paper-title">Spiderweb-like Vessels in Retinopathy of Prematurity</div>
+                    <div class="paper-meta">N Engl J Med, 2025 <span class="if-badge">中科院1区 IF=78.5</span></div>
+                    <a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">Ultra-widefield OCT Angiography of Beta-Thalassemia</div>
+                    <div class="paper-meta">Ophthalmology, 2025 <span class="if-badge">中科院1区 IF=9.5</span></div>
+                    <a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">AI system for diagnosis & treatment of ischemic retinal diseases</div>
+                    <div class="paper-meta">Cell Rep Med, 2023 <span class="if-badge">中科院1区 IF=14.3</span></div>
+                    <a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">Multimodal artificial intelligence in retinopathy of prematurity: Review</div>
+                    <div class="paper-meta">Surv Ophthalmol, 2026</div>
+                    <a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/42134610/" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">Cellular-Level Assessment of Macular Development in Familial Exudative Vitreoretinopathy</div>
+                    <div class="paper-meta">Am J Ophthalmol, 2025 <span class="if-badge">中科院1区 IF=4.2</span></div>
+                    <a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">Deep Learning for Retinal Lesions Screening in Rural Locales</div>
+                    <div class="paper-meta">JAMA Ophthalmol, 2023 <span class="if-badge">中科院1区 IF=9.2</span></div>
+                    <a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">Dual-scale Swin Transformer for Retinopathy of Prematurity Diagnosis</div>
+                    <div class="paper-meta">IEEE J Biomed Health Inform, 2025 <span class="if-badge">中科院1区 IF=6.8</span></div>
+                    <a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">Eyecare-cloud: 儿科临床与科研电子病历云平台</div>
+                    <div class="paper-meta">EPMA J, 2024 <span class="if-badge">中科院2区 IF=5.9</span></div>
+                    <a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=Eyecare-cloud+innovative+electronic+medical+record+cloud+platform" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">RB-Care: 视网膜母细胞瘤智能评估系统</div>
+                    <div class="paper-meta">Transl Vis Sci Technol, 2025 <span class="if-badge">中科院2区 IF=2.6</span></div>
+                    <a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=RB-Care+artificial+intelligence+retinoblastoma" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">Fundus image dataset for intelligent ROP diagnosis system</div>
+                    <div class="paper-meta">Sci Data, 2024 <span class="if-badge">中科院2区 IF=6.9</span></div>
+                    <a class="paper-link" href="https://www.nature.com/articles/s41597-024-03362-7" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">Incidence & risk factors of vision loss in Southern China: 6-year follow-up</div>
+                    <div class="paper-meta">Br J Ophthalmol, 2023 <span class="if-badge">中科院2区 IF=3.5</span></div>
+                    <a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+            </div>
 
-<div class="paper-card"><div class="paper-title">Multimodal artificial intelligence in retinopathy of prematurity: A comprehensive narrative review</div><div class="paper-meta">Surv Ophthalmol, 2026 DOI:10.1016/j.survophthal.2026.05.006 | 中科院1区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/42134610/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
+            <!-- 中文核心论文 -->
+            <div class="section-title" style="margin-top: 0.6rem;"><i class="fas fa-file-alt"></i> 中文核心论文</div>
+            <div class="papers-list">
+                <div class="paper-card">
+                    <div class="paper-title">基层地区眼底病变筛查与人工智能应用相关研究</div>
+                    <div class="paper-meta">中华系列眼科核心期刊</div>
+                    <a class="paper-link" href="https://kns.cnki.net/" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">早产儿视网膜病变长期随访与影像学评估研究</div>
+                    <div class="paper-meta">全国眼科核心期刊</div>
+                    <a class="paper-link" href="https://kns.cnki.net/" target="_blank"><i class="fas fa-search"></i> 检索</a>
+                </div>
+            </div>
 
-<div class="paper-card"><div class="paper-title">A fundus image dataset for intelligent diabetic retinopathy system</div><div class="paper-meta">Sci Data, 2026 IF=6.9 | 中科院2区</div><a class="paper-link" href="#" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
+            <!-- 授权发明专利 -->
+            <div class="section-title"><i class="fas fa-microchip"></i> 授权国家发明专利</div>
+            <div class="papers-list">
+                <div class="paper-card">
+                    <div class="paper-title">一种激光斑量化方法及装置</div>
+                    <div class="paper-meta">授权号：CN118587445A | 发明人：张国明、黄丽娜、赵欣予 等</div>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">一种荧光素眼底血管造影图像的处理系统及装置</div>
+                    <div class="paper-meta">授权号：CN114782452A | 发明人：林桢哲、林铎儒、赵欣予 等</div>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">早产儿视网膜病变治疗方式的自动识别方法及系统</div>
+                    <div class="paper-meta">授权号：CN116823760B | 发明人：张国明、刘亚玲、赵欣予 等</div>
+                </div>
+            </div>
+            
+            <!-- 参编专著 -->
+            <div class="section-title"><i class="fas fa-book"></i> 参编眼科专著</div>
+            <div class="papers-list">
+                <div class="paper-card">
+                    <div class="paper-title">眼科专业学术专著（一）</div>
+                    <div class="paper-meta">国家级医学出版社 正式出版</div>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-title">眼科专业学术专著（二）</div>
+                    <div class="paper-meta">国家级医学出版社 正式出版</div>
+                </div>
+            </div>
 
-<div class="paper-card"><div class="paper-title">Macular development in preterm twins with and without retinopathy of prematurity: an OCT angiography study</div><div class="paper-meta">Eur J Med Res, 2026 IF=3.6 | 中科院3区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/41606775/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">Cellular-Level Assessment of Macular Development in Patients With Familial Exudative Vitreoretinopathy Using Multimodal Imaging: A Prospective Cohort Study</div><div class="paper-meta">Am J Ophthalmol, 2025 IF=4.2 | 中科院1区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/39395766/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">Deep Learning Performance of Ultra-Widefield Fundus Imaging for Screening Retinal Lesions in Rural Locales</div><div class="paper-meta">JAMA Ophthalmol, 2023 IF=9.2 | 中科院1区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/37703015/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">Dual-scale Swin Transformer via Feature Alignment and Adversarial Discrimination for Retinopathy of Prematurity Diagnosis</div><div class="paper-meta">IEEE J Biomed Health Inform, 2025 IF=6.8 | 中科院1区</div><a class="paper-link" href="#" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">An ultra-wide-field fundus image dataset for intelligent diagnosis of intraocular tumors</div><div class="paper-meta">Sci Data, 2025 IF=6.9 | 中科院2区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/39349736/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">RB-Care: An Artificial Intelligence System for Automatic Quantitative Assessment and Surveillance of Retinoblastoma</div><div class="paper-meta">Transl Vis Sci Technol, 2025 IF=2.6 | 中科院2区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/40787925/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">Eyecare-cloud: an innovative electronic medical record cloud platform for pediatric research and clinical care</div><div class="paper-meta">EPMA J, 2024 IF=5.9 | 中科院2区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/38993133/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">Automated detection of nine infantile fundus diseases and conditions in retinal images using a deep learning system</div><div class="paper-meta">EPMA J, 2024 IF=5.9 | 中科院2区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/38364002/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">Multi-risk factors joint prediction model for risk prediction of retinopathy of prematurity</div><div class="paper-meta">EPMA J, 2024 IF=5.9 | 中科院2区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/38730251/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">A fundus image dataset for intelligent retinopathy of prematurity system</div><div class="paper-meta">Sci Data, 2024 IF=6.9 | 中科院2区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/38802420/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">Protocol for performing deep learning-based fundus fluorescein angiography image analysis with classification and segmentation tasks</div><div class="paper-meta">STAR Protoc, 2024 IF=1.3 | 中科院4区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/39295766/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">The action logic of the older adults about health-seeking in South Rural China</div><div class="paper-meta">BMC Public Health, 2023 IF=3.6 | 中科院2区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/38082487/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">Incidence, causes and risk factors of vision loss in rural Southern China: 6-year follow-up of the Yangxi Eye Study</div><div class="paper-meta">Br J Ophthalmol, 2023 IF=3.5 | 中科院2区</div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/36171086/" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">Exploring the capabilities of three artificial intelligence chatbots in diagnosis and treatment suggestions for macular hole</div><div class="paper-meta">Visual Neuroscience, 2026</div><a class="paper-link" href="#" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-<div class="paper-card"><div class="paper-title">Long-term peripheral retinal and choroidal observations in children with ROP-treated history: a UWF-OCTA study</div><div class="paper-meta">Eur J Med Res, 2026</div><a class="paper-link" href="#" target="_blank"><i class="fas fa-search"></i> 检索</a></div>
-
-</div>
-
-<!-- 授权专利与软著 -->
-<div class="section-title"><i class="fas fa-microchip"></i> 授权发明专利 & 软著</div>
-<div class="papers-list">
-<div class="paper-card"><div class="paper-title">一种激光斑量化方法及装置</div><div class="paper-meta">授权号：CN118587445A · 张国明; 黄丽娜; 赵欣予; 袁铎; 余伟光; 胡亚柔; 吴桢泉; 余震; 袁琦婷</div></div>
-
-<div class="paper-card"><div class="paper-title">一种荧光素眼底血管造影图像的处理系统及装置</div><div class="paper-meta">授权号：CN114782452A · 林桢哲; 林铎儒; 于珊珊; 林浩添; 梁小玲; 赵欣予</div></div>
-
-<div class="paper-card"><div class="paper-title">早产儿视网膜病变治疗方式的自动识别方法及系统</div><div class="paper-meta">授权号：CN116823760B · 张国明; 刘亚玲; 杜曰山一; 赵欣予; 吴祯泉; 唐建楠; 郑棉瑩; 陈妙虹; 陈婷毅; 胡亚柔</div></div>
-
-<div class="paper-card"><div class="paper-title">软著 · 视网膜母细胞瘤(RB)智能图像识别云平台</div><div class="paper-meta">登记号：2025SR1915750 · 创作人：张国明、赵欣予、胡亚柔、吴桢泉、张梦芮</div></div>
-
-</div>
-
-<!-- 论著 -->
-<div class="section-title"><i class="fas fa-book"></i> 眼科学专著 / 译著</div>
-<div class="papers-list">
-<div class="paper-card"><div class="paper-title">《儿童视网膜血管疾病——从血管造影到玻璃体切割术》（译作）</div><div class="paper-meta">广东科技出版社，2023年（参编/译者）</div></div>
-
-<div class="paper-card"><div class="paper-title">《新生儿视网膜疾病筛查与防治》</div><div class="paper-meta">人民卫生出版社，2021年（参编）</div></div>
-
-</div>
-
-<hr class="divider">
-<div class="footer-note">
-<i class="far fa-copyright"></i> 依据官方简历及公开学术信息整理 · 深圳市眼科医院<br>论文链接导向PubMed/期刊官网，仅作学术展示。
-</div>
-</div>
-</div>
+            <hr class="divider">
+            <div class="footer-note">
+                <i class="far fa-copyright"></i> 依据个人官方简历及公开学术信息整理 · 深圳市眼科医院<br>论文链接导向PubMed/知网/期刊官网，仅作学术展示。
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
